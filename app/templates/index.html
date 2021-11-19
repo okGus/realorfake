@@ -30,6 +30,7 @@
             </div>
         </nav>
     </header>
+
     <main>
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -87,6 +88,17 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
+        </div>
+
+        <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+              <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+            </div>
+            <form action="{{ url_for('classify_image') }}" method="POST" enctype="multipart/form-data">
+                <input type=file name=file>
+                <input type=submit value=Upload>
+            </form>
         </div>
 
     </main>
