@@ -1,0 +1,118 @@
+body {
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-brand{
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  /* z-index: 10; */
+  height: 35rem;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+/* Models
+-------------------------------------------------- */
+.row{
+  --bs-gutter-x: 0;
+}
+
+.featurette {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.col-md-7 h2 {
+  font-weight: 400;
+}
+
+.col-md-7 p {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.05rem;
+}
+
+.drag-area{
+  border: 2px dashed #515151;
+  height: 500px;
+  width: 60%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.drag-area .icon{
+  font-size: 100px;
+  color: #515151;
+}
+
+.drag-area header{
+  font-size: 30px;
+  font-weight: 500;
+  color: #515151;
+}
+
+.drag-area span{
+  font-size: 25px;
+  font-weight: 500;
+  color: #515151;
+  margin: 10px 0 15px 0;
+}
+
+.drag-area button{
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #515151;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* .drag-area-img */
+.img-upload{
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}
