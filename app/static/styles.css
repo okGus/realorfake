@@ -9,6 +9,17 @@ img {
   margin-right: auto;
 }
 
+.column {
+ float: left;
+ width: 50%;
+}
+
+/* .row {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
 .navbar-brand{
   margin-right: 0.75rem;
   margin-left: 0.75rem;
@@ -23,6 +34,7 @@ img {
   bottom: 3rem;
   /* z-index: 10; */
   height: 35rem;
+
 }
 
 /* Declare heights because of positioning of img element */
@@ -40,9 +52,6 @@ img {
 
 /* Models
 -------------------------------------------------- */
-.row{
-  --bs-gutter-x: 0;
-}
 
 .featurette {
   margin-bottom: 1.5rem;
