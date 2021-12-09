@@ -40,8 +40,8 @@
         </div>
     </form>
     
-    {% if prediction %}
-    <p> Prediction for input image is: {{ prediction }} </p>
+    {% if final_str_prediction and confidence %}
+    <p> Prediction for input image is {{ prediction }} with a {{ confidence }} precent confidence.</p>
     {% endif %}
 </body>
 
