@@ -125,3 +125,21 @@ img {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
+
+.prediction {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prediction h5 {
+  text-align: center;
+}
+
+.text-upload {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}

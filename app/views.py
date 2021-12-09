@@ -11,7 +11,7 @@ from tensorflow.keras import models
 import os
 # import tensorflow as tf
 
-UPLOAD_FOLDER = './images'
+UPLOAD_FOLDER = '/home/gus/Projects/webapp/realorfake/app/images'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 resModel = models.load_model('app/models/resModel.h5')
@@ -29,18 +29,26 @@ def classify_image():
         return render_template('classify_image.html')
 
     if request.method == 'POST':
+        # Delete content in images folder
+        folder = os.path.join(app.config["UPLOAD_FOLDER"])
+        images_folder = os.listdir(folder)
+        if len(images_folder) > 200: # delete content of folder if images contains +200
+            for i in images_folder:
+                try:
+                    os.remove(folder+'/'+i)
+                except OSError as e:
+                    print("Error: %s : %s" % (i, e.strerror))
+
         # Get file object from user input.
         file = request.files['file']
 
         if file:
             filename = secure_filename(file.filename)
-            filename = os.path.join(app.config['UPLOAD_FOLDER'],filename)
-            file.save(filename)
-            test = file.read()
-            print(test)
-            
+            path = os.path.join(app.config['UPLOAD_FOLDER'],filename)
+            file.save(path)
+
             # Read the image using keras preprocessing
-            img = image.load_img(file, target_size=(256, 256, 3))
+            img = image.load_img(path, target_size=(256, 256, 3))
 
             # Resize the image to match the input of the model will accept
             img = image.img_to_array(img)
@@ -64,6 +72,12 @@ def classify_image():
             confidence = result * \
                 100 if final_str_pred == "Fake" else (1 - result) * 100
 
-            return render_template('classify_image.html', final_str_pred=final_str_pred, confidence=confidence)
+            return render_template('classify_image.html', final_str_pred=final_str_pred, confidence=confidence, image_=file.filename)
 
         return render_template('classify_image.html')
+
+
+@app.route('/uploads/<filename>')
+def send_uploaded_file(filename=""):
+    from flask import send_from_directory
+    return send_from_directory(app.config["UPLOAD_FOLDER"], filename)
