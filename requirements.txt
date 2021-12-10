@@ -26,13 +26,11 @@ kiwisolver==1.3.2
 libclang==12.0.0
 Markdown==3.3.6
 MarkupSafe==2.0.1
-matplotlib==3.5.0
 networkx==2.6.3
 numpy==1.21.4
 oauthlib==3.1.1
 opt-einsum==3.3.0
 packaging==21.3
-Pillow==8.4.0
 protobuf==3.19.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
@@ -43,8 +41,6 @@ PyWavelets==1.2.0
 requests==2.26.0
 requests-oauthlib==1.3.0
 rsa==4.8
-scikit-image==0.18.3
-scipy==1.7.2
 setuptools-scm==6.3.2
 six==1.16.0
 tensorboard==2.7.0

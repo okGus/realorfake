@@ -1,15 +1,11 @@
 from app import app
 from flask import render_template, request
 
-# from skimage import io
-# from skimage import transform
-
 from werkzeug.utils import secure_filename
 from keras.preprocessing import image
 import numpy as np
 from tensorflow.keras import models
 import os
-# import tensorflow as tf
 
 UPLOAD_FOLDER = '/home/gus/Projects/webapp/realorfake/app/images'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
