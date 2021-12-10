@@ -52,5 +52,5 @@ tifffile==2021.11.2
 typing-extensions==4.0.1
 urllib3==1.26.7
 Werkzeug==2.0.2
-#wrapt==1.13.3
-#zipp==3.6.0
+wrapt==1.13.3
+zipp==3.6.0
