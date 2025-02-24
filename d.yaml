@@ -1,0 +1,17 @@
+ train: /content/bdd100k/images/train
+ val: /content/bdd100k/images/val
+ 
+ nc: 10
+ 
+ names: [
+    "pedestrian",
+    "rider",
+    "car",
+    "truck",
+    "bus",
+    "train",
+    "motorcycle",
+    "bicycle",
+    "traffic light",
+    "traffic sign"
+]

@@ -6,3 +6,5 @@
 /__pycache__
 train.txt
 val.txt
+*.zip
+*.hdf5

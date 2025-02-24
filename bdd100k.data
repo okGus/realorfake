@@ -1,0 +1,5 @@
+classes=9
+train = /home/gus/Projects/realorfake/train.txt
+valid = /home/gus/Projects/realorfake/val.txt
+names = /home/gus/Projects/realorfake/bdd100k.names
+backup = /home/gus//Projects/realorfake/backup/
