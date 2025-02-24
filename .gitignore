@@ -1,0 +1,6 @@
+/venv
+/backup
+/models
+/bdd100k_to_yolo_converter
+.ipynb_checkpoints
+/__pycache__
