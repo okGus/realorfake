@@ -4,3 +4,5 @@
 /bdd100k_to_yolo_converter
 .ipynb_checkpoints
 /__pycache__
+train.txt
+val.txt
